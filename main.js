@@ -37,3 +37,14 @@ if (toggleBtn && header) {
     }
   });
 }
+
+// Copy to clipboard
+document.querySelectorAll('.footer__copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const text = btn.getAttribute('data-copy');
+    navigator.clipboard.writeText(text).then(() => {
+      btn.classList.add('copied');
+      setTimeout(() => btn.classList.remove('copied'), 1500);
+    });
+  });
+});

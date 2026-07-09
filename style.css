@@ -282,6 +282,44 @@ h2 {
   line-height: 2;
 }
 
+.footer__contato-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__contato-link {
+  color: var(--cinza);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer__contato-link:hover {
+  color: var(--branco);
+}
+
+.footer__copy-btn {
+  background: transparent;
+  border: none;
+  color: var(--cinza);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s;
+}
+
+.footer__copy-btn:hover {
+  color: var(--branco);
+  background: rgba(255,255,255,.1);
+}
+
+.footer__copy-btn.copied {
+  color: #25D366;
+}
+
 .footer__copy {
   color: rgba(255,255,255,.4);
   font-size: .72rem;
