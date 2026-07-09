@@ -545,6 +545,8 @@ h2 {
     padding: 0;
     flex-direction: row;
     box-shadow: none;
+    visibility: visible;
+    overflow: visible;
   }
 
   .header__menu {
