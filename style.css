@@ -18,12 +18,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--sans);
   color: var(--texto);
   background: var(--branco);
+  overflow-x: hidden;
 }
 
 .container {
@@ -93,15 +95,15 @@ h2 {
   width: 100%;
   max-width: 380px;
   text-align: center;
-  background: transparent;
-  border: 1.5px solid var(--branco);
+  background: #25D366;
+  border: 1.5px solid #25D366;
   color: var(--branco);
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .hero .btn--cta:hover {
-  background: var(--branco);
-  color: var(--azul);
+  background: #20ba5a;
+  color: var(--branco);
 }
 
 .hero__photo {
@@ -394,15 +396,19 @@ h2 {
   height: 100vh;
   background: var(--azul);
   padding: 6rem 2rem 2rem;
-  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s 0.4s;
   display: flex;
   flex-direction: column;
   box-shadow: -4px 0 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  visibility: hidden;
+  overflow: hidden;
 }
 
 .header--open .header__nav {
   right: 0;
+  visibility: visible;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s 0s;
 }
 
 .header__menu {
@@ -431,8 +437,8 @@ h2 {
 }
 
 .btn--cta.btn--header {
-  background: transparent;
-  border: 1.5px solid var(--branco);
+  background: #25D366;
+  border: 1.5px solid #25D366;
   color: var(--branco);
   width: 100%;
   margin-top: 1.5rem;
@@ -446,8 +452,8 @@ h2 {
 }
 
 .btn--cta.btn--header:hover {
-  background: var(--branco);
-  color: var(--azul);
+  background: #20ba5a;
+  color: var(--branco);
 }
 
 .btn--cta.btn--header::after {
