@@ -10,14 +10,8 @@ Landing page profissional para o advogado **Dr. Luiz Felipe Ferraz**, com foco e
 | `index.html` | Estrutura completa da página (header, hero, sobre, diferenciais, áreas, atendimento, footer, botão flutuante WhatsApp) |
 | `style.css` | Estilos com Google Fonts (Inter + Playfair Display), variáveis CSS, responsividade e animações |
 | `main.js` | Animação de scroll com IntersectionObserver + toggle do menu mobile + funcionalidade de copiar no footer |
-| `luiz-atualizada.jpeg` | Foto atual do advogado (usada no hero) |
-| `foto-dr.jpg` | Foto anterior do advogado (mantida no diretório, não usada) |
-| `logo.jpeg` | Logo antiga do escritório (mantida no diretório, não usada) |
 | `logo_ffadv.png` | Logo principal e atual do escritório (usada no header e footer) |
-| `logo_ffadv_old.png` | Versão anterior do logo (não usada) |
-| `logo_ffadv_2.png` | Versão alternativa do logo (não usada) |
-| `logo_ffadv_3.png` | Versão alternativa do logo (não usada) |
-| `logo_ffadv_atualizado.png` | Versão alternativa do logo (não usada) |
+| `luiz-atualizada.jpeg` | Foto atual do advogado (usada no hero) |
 | `favicon.png` | Favicon do site |
 
 ## Estrutura da Página (seções em ordem)
@@ -31,34 +25,10 @@ Landing page profissional para o advogado **Dr. Luiz Felipe Ferraz**, com foco e
 7. **FOOTER** — Logo, contato (telefone clicável + copiar, Instagram com logo colorido, e-mail clicável + copiar, endereço), copyright "© 2026 Ferraz Advocacia"
 8. **BOTÃO FLUTUANTE WHATSAPP** — Botão fixo no canto inferior direito com ícone WhatsApp e animação pulse
 
-## Design System
-
-### Paleta de Cores (variáveis CSS)
-- `--azul: #0B2545` — cor principal (header, hero, diferenciais border, textos, footer, atendimento)
-- `--cinza: #D3D3D3` — bordas e texto secundário
-- `--cinza-claro: #F4F4F4` — fundo das seções "sobre" e "áreas"
-- `--verde: #2E7D32` — botão CTA genérico (não mais usado nos botões principais)
-- `--verde-hover: #1B5E20` — hover do botão CTA genérico
-- `--branco: #fff` — fundo padrão
-- `--texto: #333` — cor padrão de texto do body
-- `#25D366` — cor do WhatsApp (usada nos botões CTA do hero, header, botão flutuante e indicador pulsante)
-- `#20ba5a` — hover dos botões CTA verde
-
-### Tipografia
-- **Google Fonts**: `Inter` (weights 300–700) e `Playfair Display` (weights 400–800, incluindo itálico)
-- `--fonte: 'Inter', sans-serif` — usada em h2 e títulos
-- `--sans: 'Inter', sans-serif` — corpo de texto
-- Nota: `Playfair Display` está importada mas não está sendo utilizada explicitamente no CSS atual
-
-### Responsividade
-- **Mobile-first**: layout em coluna, menu hamburger lateral (slide-in da direita)
-- **Desktop (≥ 768px)**: header com menu em linha, hero em linha (foto à direita), diferenciais em 4 colunas, áreas em 6 colunas, footer em linha, container com `width: 70%`
-- **Breakpoint extra (≥ 1300px)**: ajuste da posição do botão flutuante WhatsApp
-
 ## Funcionalidades Implementadas
 - [x] Layout responsivo mobile-first
 - [x] Header sticky com backdrop-filter blur
-- [x] Menu hamburger com animação X (slide-in lateral)
+- [x] Menu hamburger com animação X (slide-in lateral direita)
 - [x] Menu mobile inicia oculto (`visibility: hidden` + `overflow: hidden`)
 - [x] Fecha menu ao clicar em link ou fora do menu (overlay)
 - [x] Animação de fade-in no scroll (IntersectionObserver em `.diferencial`, `.area`, `.sobre`, `.atendimento`)
@@ -70,6 +40,7 @@ Landing page profissional para o advogado **Dr. Luiz Felipe Ferraz**, com foco e
 - [x] Smooth scroll com `scroll-padding-top: 100px` (compensa header sticky)
 - [x] Hero sem corte de foto: `object-fit: contain` no desktop
 - [x] Favicon personalizado (`favicon.png`)
+- [x] Google Tag Manager (GTM-KPZGKJ77)
 - [x] Google Analytics (tag G-Z0ZE4LHNDP)
 - [x] Divider decorativo nas seções Sobre e Áreas
 - [x] Footer: telefone clicável (tel:) com botão de copiar
@@ -102,16 +73,15 @@ Landing page profissional para o advogado **Dr. Luiz Felipe Ferraz**, com foco e
 - [ ] Considerar usar `Playfair Display` nos títulos (já importada mas não aplicada)
 - [ ] Considerar adicionar seção de depoimentos/avaliações
 - [ ] Considerar adicionar formulário de contato alternativo ao WhatsApp
-- [ ] Limpar arquivos não utilizados (logo.jpeg, foto-dr.jpg, logo_ffadv_old.png, logo_ffadv_2.png, logo_ffadv_3.png, logo_ffadv_atualizado.png, Imagem colada.png, Imagem colada (2).png)
 
 ## Observações Técnicas
 - Todos os ícones são SVG inline — não há dependência de bibliotecas de ícones
 - Não há framework CSS (Bootstrap, Tailwind etc.) — CSS puro com variáveis
 - Não há framework JS — JavaScript vanilla
 - Fontes via Google Fonts CDN (Inter e Playfair Display)
-- Google Analytics configurado via gtag.js
+- Google Tag Manager + Google Analytics configurados
 - Header usa `position: sticky` com `backdrop-filter: blur(10px)`
 - Menu mobile usa `position: fixed` com transição cubic-bezier
 - Funcionalidade de copiar usa `navigator.clipboard.writeText()` com feedback visual (classe `.copied`)
 - Logo do Instagram usa SVG com `radialGradient` para reproduzir o gradiente colorido oficial
-- Repositório Git configurado no GitHub: `greglixandrao/ferrazadv` (branch `main`)
+- Repositório Git: `greglixandrao/ferrazadv` (branch `main`)
