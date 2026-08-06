@@ -51,7 +51,7 @@ Landing page profissional para o advogado **Dr. Luiz Felipe Ferraz**, com foco e
 ## Dados Reais Já Configurados
 - **WhatsApp**: `5511940878502` (com mensagem pré-definida)
 - **Telefone**: `(11) 94087-8502`
-- **E-mail**: `contato@ferrazeferrariadvogados.com.br`
+- **E-mail**: `luiz.felipe@ferrazassociado.com.br`
 - **Instagram**: `@ferraz.advogado` (link: https://instagram.com/ferraz.advogado)
 - **Endereço**: São Paulo – SP
 - **Copyright**: © 2026 Ferraz Advocacia
